@@ -1,0 +1,22 @@
+.display {
+    border: 1px solid gray;
+    width: 300px;
+    height: 100px;
+    font-size: 50px;
+}
+
+.display-granted {
+    border: 1px solid gray;
+    width: 300px;
+    height: 100px;
+    font-size: 30px;
+    background-color: green;
+}
+
+.display-denied {
+    border: 1px solid gray;
+    width: 300px;
+    height: 100px;
+    font-size: 30px;
+    background-color: red;
+}
