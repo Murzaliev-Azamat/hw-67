@@ -34,29 +34,17 @@ const Intercom = () => {
     )
   }
 
-  // let buttons = null;
-  //
-  // for (let i = 0; i < 9; i++) {
-  //   buttons = (
-  //     <button onClick={() => dispatch(addNumber(i))} className="btn">i</button>
-  //     )
-  //   return buttons
-  // }
+  let btnNumbers = [];
+
+  for (let i = 1; i <= 9; i++) {
+    btnNumbers.push(<button key={i} onClick={() => dispatch(addNumber(i))} className="btn">{i}</button>);
+  }
 
   return (
     <>
       {info}
       <div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-between"}}>
-        {/*{buttons}*/}
-        <button onClick={() => dispatch(addNumber(1))} className="btn">1</button>
-        <button onClick={() => dispatch(addNumber(2))} className="btn">2</button>
-        <button onClick={() => dispatch(addNumber(3))} className="btn">3</button>
-        <button onClick={() => dispatch(addNumber(4))} className="btn">4</button>
-        <button onClick={() => dispatch(addNumber(5))} className="btn">5</button>
-        <button onClick={() => dispatch(addNumber(6))} className="btn">6</button>
-        <button onClick={() => dispatch(addNumber(7))} className="btn">7</button>
-        <button onClick={() => dispatch(addNumber(8))} className="btn">8</button>
-        <button onClick={() => dispatch(addNumber(9))} className="btn">9</button>
+        {btnNumbers}
         <button onClick={() => dispatch(deleteSymbol())} className="btn">{"<"}</button>
         <button className="btn">0</button>
         <button onClick={() => dispatch(toggleCheck())} className="btn">E</button>
